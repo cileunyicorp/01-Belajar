@@ -69,6 +69,8 @@ if(isset($_GET['pesan'])){
 		echo "Data berhasil di hapus.";
 	}
 }
+
+
 ?>
 
 
