@@ -6,15 +6,3 @@ $host = mysqli_connect("127.0.0.1","FARID","Bandung01","mahasiswa");
 // $db = mysqli_select_db($host,"mahasiswa");
  
 ?>
-
-
-// koneksi input username mahasiswa
-<?php 
-$koneksi = mysqli_connect("127.0.0.1","FARID","","mahasiswa","ekonomi");
- 
-// Check connection
-if (mysqli_connect_errno()){
-	echo "Koneksi database gagal : " . mysqli_connect_error();
-}
- 
-?>
