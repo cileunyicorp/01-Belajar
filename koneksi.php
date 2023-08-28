@@ -6,4 +6,4 @@ $host = mysqli_connect("127.0.0.1","FARID","Bandung01","mahasiswa");
 // $db = mysqli_select_db($host,"mahasiswa");
  
 ?>
-// ahmad a
+
