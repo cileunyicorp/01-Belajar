@@ -8,7 +8,7 @@ $host = mysqli_connect("127.0.0.1","FARID","Bandung01","mahasiswa");
 ?>
 
 
-
+// koneksi input username mahasiswa
 <?php 
 $koneksi = mysqli_connect("127.0.0.1","FARID","","mahasiswa","ekonomi");
  
