@@ -18,7 +18,7 @@
 	$data = mysqli_query($koneksi,"select * from ekonomi where nim='$nim'");
 	while($d = mysqli_fetch_array($data)){
 		?>
-		<form method="post" action="update.php">
+		<form method="post" action="update.php">0
 			<table>
 				<tr>
 					<td>NIM</td>

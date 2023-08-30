@@ -8,7 +8,7 @@
  
 	<h2>CRUD DATA MAHASISWA - WWW.FARIDGANTENG.COM</h2>
 	<br/>
-	<a href="index.php">KEMBALI</a>
+	<a href="tambah.php">TAMBAH DATA MAHASISWA</a>
 	<br/>
 	<br/>
 	<h3>DATA MAHASISWA EKONOMI</h3>
