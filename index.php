@@ -1,80 +1,47 @@
+<!-- Your HTML and previous code here -->
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Membuat CRUD Dengan PHP Dan MySQL - Menampilkan data dari database</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<title>CRUD PHP dan MySQLi - WWW.FARIDGANTENG.COM</title>
 </head>
 <body>
-	<div class="judul">		
-		<h1>Membuat CRUD Dengan PHP Dan MySQL</h1>
-		<h2>Menampilkan data dari database</h2>
-		<h3>www.mahasiswa.com</h3>
-	</div>
-	<br/>
  
-	<?php 
-	if(isset($_GET['pesan'])){
-		$pesan = $_GET['pesan'];
-		if($pesan == "input"){
-			echo "Data berhasil di input.";
-		}else if($pesan == "update"){
-			echo "Data berhasil di update.";
-		}else if($pesan == "hapus"){
-			echo "Data berhasil di hapus.";
-		}
-	}
-	?>
+	<h2>CRUD DATA MAHASISWA - WWW.FARIDGANTENG.COM</h2>
 	<br/>
-	<a class="tombol" href="input.php">+ Tambah Data Baru</a>
- 
-	<h3>Data user</h3>
-	<table border="1" class="table">
-		<tr>
-			<th>No</th>
-			<th>Nama</th>
-			<th>Alamat</th>
-			<th>hoby</th>
-			<th>Opsi</th>		
-		</tr>
-		<?php 
-		include "koneksi.php";
-		$query = "SELECT * FROM ekonomi";
-		$query_mysql = mysqli_query($host, $query) or die(mysqli_error($host));
-		$nomor = 1;
-		while($data = mysqli_fetch_array($query_mysql)){
-		?>
-		<tr>
-			<td><?php echo $nomor++; ?></td>
-			<td><?php echo $data['nama']; ?></td>
-			<td><?php echo $data['alamat']; ?></td>
-			<td><?php echo $data['hoby']; ?></td>
-			<td>
-				<a class="edit" href="edit.php?nim=<?php echo $data['nim']; ?>">Edit</a> |
-				<a class="hapus" href="hapus.php?nim=<?php echo $data['nim']; ?>">Hapus</a>					
-			</td>
-		</tr>
-		<?php } ?>
-	</table>
-</body>
-</html>
+	<a href="index.php">KEMBALI</a>
+	<br/>
+	<br/>
+	<h3>DATA MAHASISWA EKONOMI</h3>
+	<form method="post" action="tambah_aksi.php">
 
-<?php 
-if(isset($_GET['pesan'])){
-	$pesan = $_GET['pesan'];
-	if($pesan == "input"){
-		echo "Data berhasil di input.";
-	}else if($pesan == "update"){
-		echo "Data berhasil di update.";
-	}else if($pesan == "hapus"){
-		echo "Data berhasil di hapus.";
-	}
-}
+<table border="1" class="table">
+    <tr>
+        <th>No</th>
+        <th>Nama</th>
+        <th>Alamat</th>
+        <th>Hoby</th>
+        <th>Opsi</th>
+    </tr>
+    <?php
+    include "koneksi.php"; // Assuming this file contains database connection code
 
+    // Use the $koneksi variable from the included file for mysqli_query()
+    $query = "SELECT * FROM ekonomi";
+    $query_mysql = mysqli_query($koneksi, $query) or die(mysqli_error($koneksi)); // Use $koneksi here
+    $nomor = 1;
+    while ($data = mysqli_fetch_array($query_mysql)) {
+    ?>
+        <tr>
+            <td><?php echo $nomor++; ?></td>
+            <td><?php echo $data['nama']; ?></td>
+            <td><?php echo $data['alamat']; ?></td>
+            <td><?php echo $data['hoby']; ?></td>
+            <td>
+                <a class="edit" href="edit.php?nim=<?php echo $data['nim']; ?>">Edit</a> |
+                <a class="hapus" href="hapus.php?nim=<?php echo $data['nim']; ?>">Hapus</a>
+            </td>
+        </tr>
+    <?php } ?>
+</table>
 
-
-
-
-	
-?>
-
-
+<!-- The rest of your HTML and PHP code -->
