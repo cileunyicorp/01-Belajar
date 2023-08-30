@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>CRUD PHP dan MySQLi - WWW.MAHASISWA.COM</title>
+	<title>CRUD PHP dan MySQLi - WWW.FARIDGANTENG.COM</title>
 </head>
 <body>
  
-	<h2>CRUD DATA EKONOMI - WWW.MAHASISWA.COM</h2>
+	<h2>CRUD DATA EKONOMI - WWW.FARIDGANTENG.COM</h2>
 	<br/>
 	<a href="index.php">KEMBALI</a>
 	<br/>
